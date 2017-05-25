@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calendarDemoApp" id="top">
+
+<head>
+    <title>AngularUI Calendar for AngularJS</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="calendarDemo.css" />
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script src="../bower_components/fullcalendar/dist/gcal.js"></script>
+    <script src="../src/calendar.js"></script>
+    <script src="calendarDemo.js"></script>
+</head>
+
+<body data-spy="scroll">
+
+    <div role="main">
+        <div class="container">
+            <section id="directives-calendar" ng-controller="CalendarCtrl">
+                <div class="well">
+                    <div class="row-fluid">
+
+
+                    </div>
+
+                    <div class="span8">
+                        <tabset>
+                            <tab select="renderCalendar('myCalendar1');">
+                                <tab-heading>
+                                    <i class="glyphicon glyphicon-bell"></i> Calendar One
+                                </tab-heading>
+                                <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+                                    <h4>{{alertMessage}}</h4>
+                                </div>
+
+                                <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
+                            </tab>
+                        </tabset>
+                    </div>
+                </div>
+        </div>
+        <pre class="prettyprint linenums">
+
+            </pre>
+        </section>
+    </div>
+    </div>
+</body>
+
+</html>
