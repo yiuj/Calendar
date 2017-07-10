@@ -3,7 +3,7 @@
  */
 var calendarDemoApp = angular.module('calendarDemoApp', ['ui.calendar', 'ui.bootstrap']);
 
-calendarDemoApp.controller('CalendarCtrl',
+calendarDemoApp.controller('CalendarCtrl', 
   function ($scope, $compile, $timeout, uiCalendarConfig) {
     var date = new Date();
     var d = date.getDate();
